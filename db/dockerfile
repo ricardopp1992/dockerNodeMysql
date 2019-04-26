@@ -1,0 +1,7 @@
+FROM mysql:5.7
+
+ENV MYSQL_DATABASE fizzmod
+ENV MYSQL_ROOT_PASSWORD 1234
+ENV DATABASE_HOST db
+
+COPY ./sql-querys ./docker-entrypoint-initdb.d/
